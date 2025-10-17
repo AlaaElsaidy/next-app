@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from 'next/link'
 export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#0a192f] text-orange-400 font-sans p-6 sm:p-12">
@@ -14,12 +14,12 @@ export default function NotFound() {
           The page you’re looking for doesn’t exist, has been moved, or is temporarily unavailable.
         </p>
 
-        <a
+        <Link
           href="/"
           className="inline-block mt-6 px-6 py-3 bg-orange-400 text-[#0a192f] rounded-lg font-semibold shadow-md hover:bg-orange-500 transition-all duration-300"
         >
           Go Back Home
-        </a>
+        </Link>
       </div>
     </div>
   )
