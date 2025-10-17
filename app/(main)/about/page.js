@@ -6,9 +6,6 @@ export default function AboutUs() {
         <h1 className="text-5xl sm:text-6xl font-extrabold drop-shadow-lg">
           About Us
         </h1>
-
-        
-      
     
     </div>
   )
