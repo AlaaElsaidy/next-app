@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
-// --- Fetch all products (ISR-enabled)
+import Image from 'next/image';
 async function getProducts() {
   const res = await fetch("https://fakestoreapi.com/products", {
     next: { revalidate: 60 },
@@ -23,7 +22,7 @@ export default async function ProductsPage() {
             key={product.id}
             className="bg-[#112240] border border-gray-700 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 p-5 flex flex-col items-center text-center"
           >
-            <img
+            <Image
               src={product.image}
               alt={product.title}
               className="w-full h-48 object-contain rounded-lg mb-4 bg-[#0a192f]"

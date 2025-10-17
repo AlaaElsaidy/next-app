@@ -1,7 +1,7 @@
-// app/products/page.js
+import Image from 'next/image'
 export default async function ProductsPage() {
   const res = await fetch('https://fakestoreapi.com/products', {
-    cache: 'no-store', // ensures fresh data on every request
+    cache: 'no-store', 
   });
   const products = await res.json();
 
@@ -11,7 +11,7 @@ export default async function ProductsPage() {
       <ul>
         {products.map(product => (
           <li key={product.id}>
-            <img
+            <Image
               src={product.image}
               alt={product.title}
               width={100}

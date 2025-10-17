@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-
+import Image from 'next/image';
 export default function TodoPage() {
   const [todos, setTodos] = useState([])
   const [title, setTitle] = useState('')
@@ -100,7 +100,7 @@ export default function TodoPage() {
                          overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all"
             >
               {t.imageUrl && (
-                <img
+                <Image
                   src={t.imageUrl}
                   alt="Todo"
                   className="h-52 w-full object-cover border-b border-gray-700"
