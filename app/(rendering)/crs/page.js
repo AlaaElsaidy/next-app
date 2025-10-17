@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react';
-
+import Image from 'next/image'
 export default function ProductsPage() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,7 +26,7 @@ export default function ProductsPage() {
       <ul>
         {products.map(product => (
           <li key={product.id}>
-            <img
+            <Image
               src={product.image}
               alt={product.title}
               width={100}
